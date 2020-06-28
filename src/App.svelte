@@ -2,18 +2,22 @@
 	export let name;
 	import Nested from './Nested.svelte';
 	import WriteHtmlTag from './WriteHtmlTag.svelte';
+	import InnerHtmlTag from './InnerHtmlTag.svelte';
 	import ReactivityCountUp from './ReactivityCountUp.svelte';
 	import ReactivityUpdateArrayAndObject from './ReactivityUpdateArrayAndObject.svelte';
+	import SpreadProps from './SpreadProps.svelte'
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<InnerHtmlTag />
 	<WriteHtmlTag html={"this string contains some <strong>HTML!!!</strong>"}/>
 	<WriteHtmlTag />
-	<ReactivityCountUp/>
-	<ReactivityUpdateArrayAndObject/>
-	<Nested/>
+	<ReactivityCountUp />
+	<ReactivityUpdateArrayAndObject />
+	<SpreadProps />
+	<Nested />
 </main>
 
 <style>
