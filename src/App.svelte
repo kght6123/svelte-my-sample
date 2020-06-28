@@ -1,10 +1,19 @@
 <script>
 	export let name;
+	import Nested from './Nested.svelte';
+	import WriteHtmlTag from './WriteHtmlTag.svelte';
+	import ReactivityCountUp from './ReactivityCountUp.svelte';
+	import ReactivityUpdateArrayAndObject from './ReactivityUpdateArrayAndObject.svelte';
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<WriteHtmlTag html={"this string contains some <strong>HTML!!!</strong>"}/>
+	<WriteHtmlTag />
+	<ReactivityCountUp/>
+	<ReactivityUpdateArrayAndObject/>
+	<Nested/>
 </main>
 
 <style>

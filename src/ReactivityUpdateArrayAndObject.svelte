@@ -1,0 +1,18 @@
+<script>
+	let numbers = [1, 2, 3, 4];
+
+	function addNumber() {
+		// イコールで更新しないと反映されない（Map、Objectも同じ）
+		numbers = [...numbers, numbers.length + 1];
+		// numbers.push(numbers.length + 1);
+		// numbers = numbers;
+	}
+
+	$: sum = numbers.reduce((t, n) => t + n, 0);
+</script>
+
+<p>{numbers.join(' + ')} = {sum}</p>
+
+<button on:click={addNumber}>
+	Add a number
+</button>
